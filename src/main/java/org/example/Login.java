@@ -87,9 +87,7 @@ public class Login extends JFrame implements ActionListener{
                 pst.setString(1,prn);
                 pst.setString(2,password);
 
-                boolean rs = pst.execute();
-
-                if (rs) {
+                if (pst.execute()) {
                     setVisible(false);
                     new Library(prn).setVisible(true);
                 } else {

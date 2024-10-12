@@ -17,20 +17,25 @@ public class ViewIssuedBook extends JFrame {
 
             ResultSet rs = pst.executeQuery();
             StringBuilder result = new StringBuilder();
-            result.append("Issued book(s)").append("\n");
 
-            while (rs.next()) {
-                String id = rs.getString("Book_ID");
+            if(rs.getFetchSize() == 0){
+                result.append("No Issue Found");
+            }
+            else {
+                result.append("Issued book(s)").append("\n");
+                while (rs.next()) {
+                    String id = rs.getString("Book_ID");
 
-                PreparedStatement p = c.c.prepareStatement("SELECT * FROM books WHERE Book_ID = ?");
-                p.setString(1, id);
-                ResultSet r = p.executeQuery();
+                    PreparedStatement p = c.c.prepareStatement("SELECT * FROM books WHERE Book_ID = ?");
+                    p.setString(1, id);
+                    ResultSet r = p.executeQuery();
 
-                if (r.next()) {
-                    String name = r.getString("Book");
+                    if (r.next()) {
+                        String name = r.getString("Book");
 
-                    result.append("Book ID: ").append(id).append("  ");
-                    result.append("Name: ").append(name).append("\n"); // Use name from the second query
+                        result.append("Book ID: ").append(id).append("  ");
+                        result.append("Name: ").append(name).append("\n"); // Use name from the second query
+                    }
                 }
             }
             JOptionPane.showMessageDialog(this, result.toString());
