@@ -19,7 +19,7 @@ public class ViewIssuedBook extends JFrame {
             StringBuilder result = new StringBuilder();
 
             if(rs.getFetchSize() == 0){
-                result.append("No Issue Found");
+                result.append("No Issued Books Found");
             }
             else {
                 result.append("Issued book(s)").append("\n");
