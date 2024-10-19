@@ -83,11 +83,17 @@ public class Login extends JFrame implements ActionListener{
                 String prn = tf.getText();
                 String password = new String(pf.getPassword());
 
+                if(prn.isEmpty() || password.isEmpty()){
+                    JOptionPane.showMessageDialog(null,"Missing prn or Password");
+                }
+
                 PreparedStatement pst = c.c.prepareStatement("SELECT * FROM login WHERE prn = ? AND pass = ?");
                 pst.setString(1,prn);
                 pst.setString(2,password);
 
-                if (pst.execute()) {
+                ResultSet rs = pst.executeQuery();
+
+                if (rs.next()) {
                     setVisible(false);
                     new Library(prn).setVisible(true);
                 } else {
