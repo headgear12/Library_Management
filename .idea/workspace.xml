@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="991bec44-683c-478e-bb78-5be39412bfa2" name="Changes" comment="trial">
+    <list default="true" id="991bec44-683c-478e-bb78-5be39412bfa2" name="Changes" comment="SQL Injection Security">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +30,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/headgear12/Library_Management&quot;,
+    &quot;url&quot;: &quot;https://github.com/headgear12/Library_Management.git&quot;,
     &quot;accountId&quot;: &quot;bbd928b2-ea5c-49ff-aec2-f46e580db358&quot;
   }
 }</component>
@@ -113,7 +112,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727523312241</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="retriving error solved">
+      <option name="closed" value="true" />
+      <created>1729171595633</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729171595633</updated>
+    </task>
+    <task id="LOCAL-00003" summary="SQL Injection Security">
+      <option name="closed" value="true" />
+      <created>1729360722262</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729360722262</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,7 +156,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="trial" />
-    <option name="LAST_COMMIT_MESSAGE" value="trial" />
+    <MESSAGE value="retriving error solved" />
+    <MESSAGE value="SQL Injection Security" />
+    <option name="LAST_COMMIT_MESSAGE" value="SQL Injection Security" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
