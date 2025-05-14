@@ -12,15 +12,23 @@ public class Login extends JFrame implements ActionListener{
     JButton b1,b2,b3;
 
     Login(){
-        setTitle("AUTOMATED TELLER MACHINE");
+        setTitle("LIBRARY MANAGEMENT SYSTEM");
 
-        l1 = new JLabel("WELCOME TO Library");
-        l1.setFont(new Font("Osward", Font.BOLD, 38));
+        ImageIcon i1= new ImageIcon(ClassLoader.getSystemResource("Icons/logo.png"));
+        Image i2 = i1.getImage().getScaledInstance(80, 80, Image.SCALE_DEFAULT);
+        ImageIcon i3 = new ImageIcon(i2);
+        JLabel lable= new JLabel(i3);
+        lable.setBounds(70, 10, 80, 80);
+        add(lable);
+
+
+        l1 = new JLabel("WELCOME TO LIBRARY");
+        l1.setFont(new Font("Osward", Font.BOLD, 36));
         l1.setBounds(150,40,450,40);
         add(l1);
 
-        l2 = new JLabel("PRN:");
-        l2.setFont(new Font("Raleway", Font.BOLD, 28));
+        l2 = new JLabel("PRN No:");
+        l2.setFont(new Font("Raleway", Font.BOLD, 25));
         l2.setBounds(75,150,375,30);
         add(l2);
 
@@ -29,8 +37,8 @@ public class Login extends JFrame implements ActionListener{
         tf.setFont(new Font("Arial", Font.BOLD, 14));
         add(tf);
 
-        l3 = new JLabel("PASS:");
-        l3.setFont(new Font("Raleway", Font.BOLD, 28));
+        l3 = new JLabel("Password:");
+        l3.setFont(new Font("Raleway", Font.BOLD, 25));
         l3.setBounds(75,220,375,30);
         add(l3);
 

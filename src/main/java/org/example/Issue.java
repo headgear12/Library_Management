@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class Issue extends JFrame implements ActionListener {
+public class  Issue extends JFrame implements ActionListener {
     String prn;
     JTextField ebookid;
     JButton issue, back;

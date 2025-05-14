@@ -16,7 +16,7 @@ public class Signup extends JFrame implements ActionListener {
     Signup() {
         setTitle("Sign Up");
 
-        title = new JLabel("Sign Up");
+        title = new JLabel("Sign Up Form");
         title.setFont(new Font("Arial", Font.BOLD, 40));
         title.setBounds(250, 40, 300, 45);
         add(title);
@@ -110,16 +110,33 @@ public class Signup extends JFrame implements ActionListener {
             String password = new String(rpass.getPassword());
             String confirmPassword = new String(rrepass.getPassword());
 
-            if (password.isEmpty() || !password.equals(confirmPassword)) {
-                JOptionPane.showMessageDialog(this, "Passwords do not match!", "Error", JOptionPane.ERROR_MESSAGE);
+
+//            assert year != null;
+            if (name.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Please enter the data!", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            if (prn.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Please enter the data!", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
 
             assert year != null;
-            if (name.isEmpty() &&  year.equals("Select Academic Year")) {
-                JOptionPane.showMessageDialog(this, "Please enter the data!", "Error", JOptionPane.ERROR_MESSAGE);
+            if (year.equals("Select Academic Year")){
+                JOptionPane.showMessageDialog(this, "Please select academic year!", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
+
+            if (password.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Passwords is not created!", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            if (!password.equals(confirmPassword)) {
+                JOptionPane.showMessageDialog(this, "Passwords do not match!", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
 
             Conn conn = new Conn();
             String query1 = "INSERT INTO login (prn, pass) VALUES (?, ?)";
